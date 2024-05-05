@@ -16,6 +16,10 @@ pipeline{
             steps{
                 sh 'sudo npm install'
             }
+        stage("Build-image"){
+            steps{
+                sh 'docker build -t -my-node-app:1.0 .'
+            }
         }
     }
 }
